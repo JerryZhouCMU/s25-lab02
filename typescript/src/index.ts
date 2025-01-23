@@ -1,6 +1,17 @@
-import { newRenderer } from "./renderer.js"
-import { Rectangle, newRectangle } from "./shapes/rectangle.js";
+import { rectangle } from "./shapes/rectangle.js";
+import { circle } from "./shapes/circle.js";
+import { square } from "./shapes/square.js";
+import { newRenderer } from "./renderer.js";
 
-const rectangle: Rectangle = newRectangle(2, 3)
-const renderer = newRenderer(rectangle)
-renderer.draw();
+const rect = rectangle(2, 3); // Rectangle shape
+const circleShape = circle(5); // Circle shape
+const squareShape = square(4); // Square shape
+
+const rectRenderer = newRenderer(rect);
+rectRenderer.draw();
+
+const circleRenderer = newRenderer(circleShape);
+circleRenderer.draw();
+
+const squareRenderer = newRenderer(squareShape);
+squareRenderer.draw();
